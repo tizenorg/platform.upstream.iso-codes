@@ -40,12 +40,12 @@ make %{?_smp_mflags}
 %find_lang iso-codes --all-name
 
 %files -f iso-codes.lang
-%manifest iso-codes.manifest
+%manifest %{name}.manifest
 %dir %{_datadir}/xml/iso-codes
 %{_datadir}/xml/iso-codes/*.xml
 
 
 %files devel
-%manifest iso-codes.manifest
+%manifest %{name}.manifest
 %{_datadir}/pkgconfig/iso-codes.pc
 
